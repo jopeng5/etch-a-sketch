@@ -1,8 +1,18 @@
 // select container div
-const container = document.querySelector('.container');
+const contentDiv = document.querySelector('.content');
 
-// create div inside container with class cell
-const cell = document.createElement('div');
-cell.classList.add('cell');
+const numOfDivs = 4;
+
+
+// function to create child divs inside containerDiv
+function createDivs(num) {
+  for (i = 0; i < num; i++) {
+    let gridItem = document.createElement('div');
+    contentDiv.appendChild(gridItem);
+    gridItem.classList.add('grid-item');
+  }
+}
+
+createDivs(numOfDivs);
 
 

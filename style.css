@@ -1,5 +1,13 @@
-.container {
+.content {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto; 
+  gap: 5px;
+}
+
+.grid-item {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: royalblue;
+  border-style: solid;
 
 }
