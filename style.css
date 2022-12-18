@@ -1,13 +1,16 @@
 .content {
   display: grid;
+  width: 600px;
+  height: 600px;
+  outline: 1px solid black;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: auto; 
-  gap: 5px;
+  grid-template-rows: repeat(16, 1fr); 
 }
 
 .grid-item {
-  grid-area: 1 / 1 / 2 / 2;
-  background-color: royalblue;
-  border-style: solid;
+  border: 1px solid black;
+}
 
+.hover {
+  background-color: blue;
 }

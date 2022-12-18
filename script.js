@@ -1,7 +1,7 @@
 // select container div
 const contentDiv = document.querySelector('.content');
 
-const numOfDivs = 4;
+const numOfDivs = 256;
 
 
 // function to create child divs inside containerDiv
@@ -13,6 +13,17 @@ function createDivs(num) {
   }
 }
 
+function changeDivColor() {
+  let gridItems = document.querySelectorAll('.grid-item');
+  // need to fix forEach to target each div
+//   gridItems.forEach(
+//     gridItems.addEventListener('mouseover', function addHoverColor(e) {
+//       gridItems.classList.add('hover');
+//     }); 
+//   );
+// };
+
 createDivs(numOfDivs);
+changeDivColor();
 
 
