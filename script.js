@@ -1,27 +1,29 @@
 // select container div
 const contentDiv = document.querySelector('.content');
 
-const numOfDivs = 256;
+// listen for click on button 16 x 16
+const btnGrid16 = document.querySelector('.btn-grid-16');
+let num =
+btnGrid16.addEventListener('click', createDivs())
 
-
-// function to create child divs inside containerDiv
+// function to create child divs inside content div
 function createDivs(num) {
   for (i = 0; i < num; i++) {
-    let gridItem = document.createElement('div');
+    const gridItem = document.createElement('div');
     contentDiv.appendChild(gridItem);
     gridItem.classList.add('grid-item');
   }
 }
 
+// change div color when mouseover
 function changeDivColor() {
-  let gridItems = document.querySelectorAll('.grid-item');
-  // need to fix forEach to target each div
-//   gridItems.forEach(
-//     gridItems.addEventListener('mouseover', function addHoverColor(e) {
-//       gridItems.classList.add('hover');
-//     }); 
-//   );
-// };
+  const gridItem = document.querySelectorAll('.grid-item');
+  gridItem.forEach(function(item) {
+    item.addEventListener('mouseover', function() {
+      item.classList.add('hover');
+      });
+  });
+};
 
 createDivs(numOfDivs);
 changeDivColor();

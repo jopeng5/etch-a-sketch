@@ -1,3 +1,8 @@
+#title {
+  color: rgb(0, 91, 248);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .content {
   display: grid;
   width: 600px;
@@ -7,10 +12,17 @@
   grid-template-rows: repeat(16, 1fr); 
 }
 
+.btns {
+  display: grid;
+  width: 90px;
+  height: 180px;
+
+}
+
 .grid-item {
   border: 1px solid black;
 }
 
 .hover {
-  background-color: blue;
+  background: blue;
 }
