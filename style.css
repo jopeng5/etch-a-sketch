@@ -5,18 +5,11 @@
 
 .content {
   display: grid;
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   outline: 1px solid black;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr); 
-}
-
-.btns {
-  display: grid;
-  width: 90px;
-  height: 180px;
-
 }
 
 .grid-item {
