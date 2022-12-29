@@ -1,29 +1,24 @@
-// select container div
-const contentDiv = document.querySelector('.content');
+const grid = document.querySelector('.grid');
+const button = document.querySelector('.btn-16');
 
-// listen for click on button 16 x 16
-// const btnGrid16 = document.querySelector('.btn-grid-16');
-// let num =
-// btnGrid16.addEventListener('click', createDivs())
-
-// add click event to 16 x 16 button and return grid size
-const btn16 = document.querySelector('.btn-16');
-
-function getGridSize() {
-  console.log(parseInt(btn16.textContent.slice(0,2),16)); 
+// find grid size
+function setGridSize(btn) {
+  return size = parseInt(btn.textContent.slice(0,2));
 };
 
-btn16.addEventListener('click', getGridSize);
 
+function createGrid(size) { 
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;  
 
-// // function to create child divs inside content div
-// function createDivs(num) {
-//   for (i = 0; i < num; i++) {
-//     const gridItem = document.createElement('div');
-//     contentDiv.appendChild(gridItem);
-//     gridItem.classList.add('grid-item');
-//   }
-// }
+  for (let i = 0; i < Math.pow(size, 2); i++) {
+    let gridElement = document.createElement('div');
+    gridElement.classList.add('grid-element');
+    grid.appendChild(gridElement);
+  }
+}
+
+createGrid(setGridSize(button));
 
 // // change div color when mouseover
 // function changeDivColor() {
