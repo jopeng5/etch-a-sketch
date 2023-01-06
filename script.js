@@ -1,24 +1,25 @@
-const grid = document.querySelector('.grid');
-const button = document.querySelector('.btn-16');
+const sketchpad = document.querySelector('.sketchpad');
 
-// find grid size
-function setGridSize(btn) {
-  return size = parseInt(btn.textContent.slice(0,2));
-};
-
-
-function createGrid(size) { 
-  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;  
+function createSketchpad(size) { 
+  sketchpad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  sketchpad.style.gridTemplateRows = `repeat(${size}, 1fr)`;  
 
   for (let i = 0; i < Math.pow(size, 2); i++) {
-    let gridElement = document.createElement('div');
-    gridElement.classList.add('grid-element');
-    grid.appendChild(gridElement);
+    let square = document.createElement('div');
+    square.style.backgroundColor = 'lightblue';
+    sketchpad.appendChild(square);
   }
 }
 
-createGrid(setGridSize(button));
+function deleteSketchpad() {
+  let sketchpadDivs = document.querySelectorAll('div');
+  console.log(sketchpadDivs);
+
+}
+
+createSketchpad(84);
+
+
 
 // // change div color when mouseover
 // function changeDivColor() {

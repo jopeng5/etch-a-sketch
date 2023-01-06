@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" href="style.css"/>
   <title>Etch-A-Sketch</title>
 </head>
 <body>
-  <main class="container"></main>
-    <h1 id="title">Etch-A-Sketch</h1>
-    <div class="size-buttons">
-      <h2>Choose a Grid Shape:</h2>
-      <button class="btn-16">16 x 16</button>
-      <button class="btn-32">32 x 32</button>
-      <button class="btn-64">64 x 64</button>
+  <main class="container">
+    <div class="title"><h1>Etch-A-Sketch</h1></div>
+    <div class="content">
+      <div class="sketchpad"></div>
+      <div class="buttons">
+        <button class="">Black</button>
+        <button class="">Rainbow</button>
+        <button class="">Reset</button>
+      </div>
+      <div>
+        <input class="input" type="text" placeholder="Enter Number from 1 to 64" alt="input field for size of grid" />
+        <button>Set Screen Size</button>
+      </div>
+      </div>
     </div>
-    <div class="grid"></div>
-  
+  </main>
 </body>
 <script src="script.js"></script>
 </html>
