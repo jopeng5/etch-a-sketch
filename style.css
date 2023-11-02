@@ -1,10 +1,36 @@
-#title {
-  color: rgb(0, 91, 248);
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.title {
+  text-align: center;
+  padding: 0 20px;
+  border: 1px solid darkslategray;
+  background-color: lightblue;
+  width: 960px;
+}
+
+.make-new-grid {
+  font: inherit;
+  line-height: 2.5;
+  padding: 0 15px;
+  border-radius: 15px;
+  border: 1px solid darkslategray;
+  background-color: lavender;
 }
 
 .sketchpad {
   display: grid;
-  width: 360px;
-  height: 360px;
+  width: 960px;
+  height: 960px;
+  margin: auto;
+  border-top: 1px solid darkslategray;
+  border-right: 1px solid darkslategray;
 }
