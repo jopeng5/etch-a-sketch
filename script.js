@@ -1,37 +1,30 @@
 const sketchpad = document.querySelector('.sketchpad');
 
 function createSketchpad(size) { 
-  sketchpad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-  sketchpad.style.gridTemplateRows = `repeat(${size}, 1fr)`;  
+  sketchpad.setAttribute('style', `grid-template-columns: repeat(${size}, 1fr); grid-template-rows: repeat(${size}, 1fr);`);
 
   for (let i = 0; i < Math.pow(size, 2); i++) {
     let square = document.createElement('div');
-    square.style.backgroundColor = 'lightblue';
+    square.setAttribute('style', 'background-color: lightblue; border: 1px solid black;');
+    square.classList.add('grid-item', `${i}`);
     sketchpad.appendChild(square);
   }
 }
 
-function deleteSketchpad() {
-  let sketchpadDivs = document.querySelectorAll('div');
-  console.log(sketchpadDivs);
+function changeDivColor() {
+  const gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(function(item) {
+    item.addEventListener('mouseenter', (e) => {
+      item.style.backgroundColor = '#ffa69e';
+    });
+  });  
+};
 
+function makeNewGrid() {
+  
 }
 
-createSketchpad(84);
-
-
-
-// // change div color when mouseover
-// function changeDivColor() {
-//   const gridItem = document.querySelectorAll('.grid-item');
-//   gridItem.forEach(function(item) {
-//     item.addEventListener('mouseover', function() {
-//       item.classList.add('hover');
-//       });
-//   });
-// };
-
-// createDivs(numOfDivs);
-// changeDivColor();
+createSketchpad(3);
+changeDivColor();
 
 
